@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Rock, Paper, Scissors</title>
+		<link rel="stylesheet" type="text/css" href="stylesheets/rps.css" />
+		<script type="text/javascript" src="javascript/rps.js"></script>
+
+	</head>
+	<body>
+		<h1>Rock, Paper and Scissors</h1>
+		<p>The rules of the game is to beat the opponet with the winning move, rock beats scissors, scissors beats paper, and paper beats rock. Your opponent will be the computer.</p>
+		<button value="rock" onClick="userRock()">Rock</button>
+		<button value="paper" onClick="userPaper()">Paper</button>
+		<button value="scissors" onClick="userScissors()">Scissors</button>
+		<input type="button" value="Start Over" onclick="restartGame()">
+		<h2 id="userResult"></h2>
+		<h2 id="compResult"></h2>
+		<h1 id="results"></h1>
+		<h2>Your Score: <span id="userPoints">0</span></h2>
+		<h2>Computer Score: <span id="compPoints">0</span></h2>
+		<div><a href="guess.html">Guess the Number</a><div>
+	</body>
+</html>
