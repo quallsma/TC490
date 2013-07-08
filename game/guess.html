@@ -10,34 +10,7 @@
 	<body>
 		<h1>Guess the Number</h1>
 		<p>The rules of the game is to guess a number between 1 to 100, after each try, the computer would let you know if you have to go higher or lower, and you'll only get three tries.</p>
-		<script>
-		function playGame(){
-			var compNumber = Math.floor(Math.random() * 100 + 1);
-			var gameStatus = true;
-			var numberOfTries = 3;
-			
-			guessTheNumber(compNumber);
-			
-			function guessTheNumber(cNum){
-				while(gameStatus){
-					for ( var i = 3; i > 0; i--){
-						var userGuess = prompt("Guess a number between 1 and 100");
-						if (cNum < userGuess){
-							document.getElementById('result').innerHTML = "Lower";
-						} else if (cNum > userGuess){
-							document.getElementById('result').innerHTML = "Higher";
-						} else {
-							document.getElementById('result').innerHTML = "Congratulation, you've guess the correct number!";
-							i = 0;
-							gameStatus = false;
-						}
-					}
-					document.getElementById('result').innerHTML = "You lost! The number was " + cNum + ".";
-					gameStatus = false;
-				}
-			}
-		}
-		</script>
+
 		<button id="startTheGame" onClick="playGame()">Start</button>
 		<h2 id="result">Results</h2>
 		<div><a href="rps.html">Rock, Paper, Scissors</a><div>
