@@ -33,8 +33,24 @@ h3 {
 
 h4 {
 	font-size: 20px;
+	text-shadow: 1px 1px 1px #FFFFFF;
 }
 
 #dates {
 	font-size: 17px;
+	color: white;
+	text-shadow: 1px 1px 1px #000000;
+}
+
+ul{
+	
+	
+}
+
+#skills {
+	list-style-type: none;
+	text-align: center;
+	border: 1px ridge #AAAAAA;
+	opacity: 0.6;
+	background-color: #006600;
 }
