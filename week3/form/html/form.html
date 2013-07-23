@@ -1,83 +1,129 @@
-<!doctype html>
- 
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <title>jQuery UI Slider - Colorpicker</title>
-  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-  <link rel="stylesheet" href="/resources/demos/style.css" />
-  <style>
-  #red, #green, #blue {
-    float: left;
-    clear: left;
-    width: 300px;
-    margin: 15px;
-  }
-  #swatch {
-    width: 120px;
-    height: 100px;
-    margin-top: 18px;
-    margin-left: 350px;
-    background-image: none;
-  }
-  #red .ui-slider-range { background: #ef2929; }
-  #red .ui-slider-handle { border-color: #ef2929; }
-  #green .ui-slider-range { background: #8ae234; }
-  #green .ui-slider-handle { border-color: #8ae234; }
-  #blue .ui-slider-range { background: #729fcf; }
-  #blue .ui-slider-handle { border-color: #729fcf; }
-  </style>
-  <script>
-  function hexFromRGB(r, g, b) {
-    var hex = [
-      r.toString( 16 ),
-      g.toString( 16 ),
-      b.toString( 16 )
-    ];
-    $.each( hex, function( nr, val ) {
-      if ( val.length === 1 ) {
-        hex[ nr ] = "0" + val;
-      }
-    });
-    return hex.join( "" ).toUpperCase();
-  }
-  function refreshSwatch() {
-    var red = $( "#red" ).slider( "value" ),
-      green = $( "#green" ).slider( "value" ),
-      blue = $( "#blue" ).slider( "value" ),
-      hex = hexFromRGB( red, green, blue );
-    $( "#swatch" ).css( "background-color", "#" + hex );
-  }
-  $(function() {
-    $( "#red, #green, #blue" ).slider({
-      orientation: "horizontal",
-      range: "min",
-      max: 255,
-      value: 127,
-      slide: refreshSwatch,
-      change: refreshSwatch
-    });
-    $( "#red" ).slider( "value", 255 );
-    $( "#green" ).slider( "value", 255 );
-    $( "#blue" ).slider( "value", 255 );
-  });
-  </script>
-</head>
-<body class="ui-widget-content" style="border: 0;">
- 
-<p class="ui-state-default ui-corner-all ui-helper-clearfix" style="padding: 4px;">
-  <span class="ui-icon ui-icon-pencil" style="float: left; margin: -2px 5px 0 0;"></span>
-  Simple Colorpicker
-</p>
- 
-<div id="red"></div>
-<div id="green"></div>
-<div id="blue"></div>
- 
-<div id="swatch" class="ui-widget-content ui-corner-all"></div>
- 
- 
-</body>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="description" content="A sample form created by Marsalis Qualls.">
+		<title>Sample Form</title>
+		<link rel="stylesheet" type="text/css" href="../stylesheets/form.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+		<link rel="stylesheet" href="/resources/demos/style.css" />
+		<script type="text/javascript" src="../javascript/form.js" charset="utf-8"></script>
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('input').tooltip({
+					track: true,
+					position: {
+						my: "left+15 center",
+						at: "right center"
+					}
+				});
+				$('#birthday').datepicker({
+					dateFormat: "'day' d 'of' MM 'in the year' yy",
+					showAnim: "slideDown",
+					changeMonth: true,
+					changeYear: true,
+					yearRange: "1960:2013"
+				});
+				$('input').focus(function() {
+				         $(this).css("background-color","#FFFFFF");
+				    });
+				$('input').blur(function(){
+				         $(this).css("background-color","	#C0C0C0");
+				  });
+			});
+			
+			function validateForm()
+			{
+			var a = document.sampleForm.firstname.value;
+			var b = document.sampleForm.middlename.value;
+			var c = document.sampleForm.lastname.value;
+			var d = document.sampleForm.birthday.value;
+			var e = document.sampleForm.street.value;
+			var f = document.sampleForm.city.value;
+			var g = document.sampleForm.state.value;
+			var h = document.sampleForm.zipcode.value;
+			var i = document.sampleForm.email.value;
+			atpos = i.indexOf("@");
+			dotpos = i.lastIndexOf(".");
+			
+			var x = 0;
+			
+			if (a==null || a==""){
+				alert("First name must be filled out");
+				document.sampleForm.firstname.focus();
+				return false;
+			}
+			if (b==null || b==""){
+				alert("Middle name must be filled out");
+				document.sampleForm.middlename.focus();
+				return false;
+			}
+			if (c==null || c==""){
+				alert("Last name must be filled out");
+				document.sampleForm.lastname.focus();
+				return false;
+			}
+			if (d==null || d==""){
+				alert("Birth Date must be filled out");
+				document.sampleForm.birthday.focus();
+				return false;
+			}
+			if (e==null || e==""){
+				alert("Street address must be filled out");
+				document.sampleForm.street.focus();
+				return false;
+			}
+			if (f==null || f==""){
+				alert("City must be filled out");
+				document.sampleForm.city.focus();
+				return false;
+			}
+			if (g==null || g=="" || g.length != 2){
+				alert("State must be filled out");
+				document.sampleForm.state.focus();
+				return false;
+			}
+			if (h==null || h=="" || isNaN(h) || h.length != 5){
+				alert("Please enter a complete zipcode with five digits");
+				document.sampleForm.zipcode.focus();
+				return false;
+			} 
+			if (i==null || i==""){
+			  	alert("Email address must be filled out");
+				document.sampleForm.email.focus();
+				return false;
+			} else if (atpos < 1 || ( dotpos - atpos < 2 )){
+			       alert("Please enter a correct email ID")
+			       document.sampleForm.email.focus() ;
+			       return false;
+			   	};
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Sample Form TBD</h1>
+		<form name="sampleForm" onsubmit="return validateForm()" method="post">
+			<fieldset>
+				<legend>Sample Form</legend>
+				<span id="wrong1"></span><label for="firstname">First Name: </label><input type="text" name="firstname" id="firstname" value="" title="Enter your first name, please."/>
+				<label for="middlename">Middle Name: </label><input type="text" name="middlename" id="middlename" value="" title="Enter your middle name, please."/>
+				<label for="lastname">Last Name: </label><input type="text" name="lastname" id="lastname" value="" title="Enter your last name, please."/><br/>
+				<label for="birthday">Birth Date: </label><input type="text" name="birthday" id="birthday" value="" size="40" title="Please enter your birthday."><br/>
+				<label>Gender:</label><div class="gender">
+					<label for="male">Male</label><input type="radio" name="gender" id="male" value="male" title="To select male as your gender."/>
+					<label for="female">Female</label><input type="radio" name="gender" id="female" value="female" title="To select female as your gender."/><br/>
+				</div>
+				<label>Address:</label><div class="address">
+					<label for="street"># Street:</label><input type="text"  name="street" id="street" value="" title="Enter your street address, please."/><br/>
+					<label for="city">City:</label><input type="text"  name="city"  id="city" value="" title="Enter your city name, please."/>
+					<label for="state">State:</label><input type="text"  name="state" id="state" size="2" maxlength="2" value="" title="Enter your state abbreviation, please."/><br/>
+					<label for="zipcode">Zip Code:</label><input type="text" name="zipcode" id="zipcode" size="5" maxlength="5" value="" title="Please enter your zipcode."/><br/>
+				</div>
+				<label for="email">Email:</label><input type="text" name="email" id="email" value="" title="Please enter your email address."><br/>
+				<input type="submit" value"Submit">
+			</fieldset>
+		</form>
+	</body>
 </html>

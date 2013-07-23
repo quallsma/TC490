@@ -6,7 +6,7 @@ function playGame(){
 	guessTheNumber(compNumber);
 	
 	function guessTheNumber(cNum){
-		while(gameStatus){
+		while(gameStatus == true){
 			for ( var i = 3; i > 0; i--){
 				var userGuess = prompt("Guess a number between 1 and 100");
 				if (cNum < userGuess){
