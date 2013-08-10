@@ -1,0 +1,56 @@
+html{
+	background: url(../images/background2.jpg);
+	
+}
+body{
+	width: 800px;
+	margin: 1.5em auto;
+}
+
+#header{
+	list-style-type: none;
+	/*display: inline;*/
+}
+
+#header li{
+	display: inline;
+}
+
+#name {
+	text-shadow: 5px 5px 5px #FFFFFF;
+	font-weight: bold;
+	font-size: 70px;
+	color: #006600;
+}
+
+h3 {
+	text-shadow: 1px 1px 1px #FFFFFF;
+	background: none;
+	color: #006600;
+	opacity: 0.5;
+	font-size: 30px;
+}
+
+h4 {
+	font-size: 20px;
+	text-shadow: 1px 1px 1px #FFFFFF;
+}
+
+#dates {
+	font-size: 17px;
+	color: white;
+	text-shadow: 1px 1px 1px #000000;
+}
+
+ul{
+	
+	
+}
+
+#skills {
+	list-style-type: none;
+	text-align: center;
+	border: 1px ridge #AAAAAA;
+	opacity: 0.6;
+	background-color: #006600;
+}

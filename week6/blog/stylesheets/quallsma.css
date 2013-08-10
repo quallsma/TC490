@@ -1,0 +1,46 @@
+.quallsma-nav {
+  background-color: #38537e;
+}
+.quallsma-nav .navbar-brand {
+  color: #fff;
+}
+.quallsma-nav .navbar-nav > li > a {
+  color: #a4b7d6;
+}
+.quallsma-nav .navbar-nav > li > a:hover {
+  color: #fff;
+}
+.quallsma-nav .navbar-nav > .active > a,
+.quallsma-nav .navbar-nav > .active > a:hover {
+  color: #fff;
+  background-color: #203049;
+}
+.quallsma-nav .navbar-toggle {
+  border-color: #38537e;
+}
+.quallsma-nav .navbar-toggle:hover {
+  background-color: #203049;
+  border-color: #203049;
+}
+
+body{
+	padding-top: 70px; 
+	background: url(../images/background2.jpg);
+	color: #fff;
+	width: 800px;
+	margin: 1.5em auto;
+	
+}
+
+.quallsma-header{
+	
+}
+
+#time{
+	color: #fff;
+}
+
+#counter span.warning { 
+	color: #b66875; 
+	background-color: #000;
+}

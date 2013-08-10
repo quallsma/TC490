@@ -1,0 +1,9 @@
+html{
+	background: url(../images/rps.jpg);
+}
+
+body{
+	width: 800px;
+	margin: 1.5em auto;
+	background-color: #fff;
+}

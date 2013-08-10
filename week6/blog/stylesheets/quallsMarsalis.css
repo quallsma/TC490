@@ -1,0 +1,225 @@
+@charset "UTF-8";
+
+
+body {
+	width: 761px;
+	margin: 1.5em auto; 
+	border-color: #800606;
+	border-style: solid;
+	border-width: 10px;
+	padding: 50px;
+	background-color: #000;
+	
+}
+
+html {
+	background: url(../images/background2.jpg);
+	
+
+}
+
+h1 {
+	text-align: center;
+	background-color: #fff;
+	color: #800606;
+	border-style: ridge;
+	border-width: 5px;
+	border-color: #666666;
+	font-family: Georgia;
+	font-size: 72px;
+}
+
+h2 {
+	padding: 10px;
+	color: #800606;
+	background-color: #CCCCCC;
+	border-style: ridge;
+	border-width: 3px;
+	border-color: #CCCCCC;
+	font-family: Georgia;
+}
+
+h3 {
+	color: #CCCCCC;
+	background-color: #800606;
+	border-style: ridge;
+	border-width: 1.5px;
+	border-color: #CCCCCC;
+	font-family: Georgia;
+	padding-left: 10px;
+	
+}
+
+table, tr, td{
+	color: white;
+	border: 1px solid white;
+}
+
+p{
+	color: #fff;
+}
+
+img {
+	border-color: #666666;
+	border-style: solid;
+	border-width: 5px;
+}
+
+a {
+  font-weight: bold;
+  color: #CCCCCC;
+  text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #000;
+	font-weight: bold;
+	background-color: #CCCCCC;
+}
+
+a:visited {
+	color: #666666;
+	
+}
+
+a:active {
+	background-color: #CCCCCC;
+	
+}
+li {
+	color: #CCCCCC;
+	font-family: Georgia;
+}
+
+#nav{
+	list-style-type: none;
+	padding: 6px;
+	text-align: center;
+	background-color: #800606;
+	border: 3px ridge #CCCCCC;
+
+}
+
+#nav a{
+	color: #fff;
+	padding-left: 50px;
+	padding-right: 50px;
+	
+	
+}
+
+#nav a:hover{
+	background-color: #666666;
+	color: #000;
+	
+}
+
+#nav li{
+	display:inline;
+	
+}
+
+#pic{
+	float: right;
+	
+}
+
+#contact{
+	margin-right: 250px;
+	
+}
+
+#footer{
+	font-size: 12px;
+	margin-top: 160px;
+	margin-bottom: -60px;
+	margin-left: -50px;
+	margin-right: -50px;
+	background-color: #800606;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 5px;
+	color: #CCCCCC;
+	
+}
+
+#footer img{
+	border: none;
+	float: right;
+	
+}
+
+div.gender {
+	margin-left: 75px;
+}
+
+div.address{
+	margin-left: 75px;
+	
+}
+
+legend{
+	color: #fff;
+	font-weight: bold;
+	font-family: Verdana;
+	border: 3px ridge #CCCCCC;
+	background: #800606;
+}
+
+label{
+	font-family: Verdana;
+	font-weight: bold;
+	color: #fff;
+}
+
+#tc472tabs {
+	border: 5px groove #CCCCCC;
+	background-color: #800606;
+	margin-right: 25px;
+	padding-right: 10px;
+	list-style-type: none;
+	color: #fff;
+	float: left;
+}
+
+#tc472tabs a{
+	color: #fff;
+}
+
+#tc472tabs a:hover{
+	background-color: #666666;
+	color: #000;
+}
+
+#drjayslogo {
+	margin-left: 400px;
+	border: none;
+}
+
+#casestudylist {
+	float: left;
+	border: 1px solid #CCCCCC;
+	background-color: #800606;
+	padding-right: 10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-top: -200px;
+	text-decoration: underline;
+	color: #000;
+}
+
+#casestudylist a{
+	color: #fff;
+}
+
+#casestudylist a:hover{
+	background-color: #666666;
+	color: #000;
+}
+
+#drjaysfi{
+	background-color: #fff;
+	border: none;
+}
