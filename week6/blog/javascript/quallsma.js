@@ -17,12 +17,12 @@ function validateComment(){
 		document.blogComment.email.focus();
 		return false;
 	}
-	else if(atPos < 1 ||  dotPos - atPos < 2 ){
+	/*else if(atPos < 1 ||  dotPos - atPos < 2 ){
 		document.getElementById("errorMessage").innerHTML = "Please enter your correct email address?";
 		$('#errorMessage').addClass('alert alert-danger');
 		document.blogComment.email.focus();
 		return false;
-	};
+	};*/
 	if(c==null || c==""){
 		document.getElementById("errorMessage").innerHTML = "Please enter your comment about the blog?";
 		$('#errorMessage').addClass('alert alert-danger');

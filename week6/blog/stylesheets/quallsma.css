@@ -43,3 +43,42 @@ body{
 #counter span.warning { 
 	color: #b66875; 
 }
+
+h3 {
+	text-shadow: 1px 1px 1px #FFFFFF;
+	background: none;
+	color: #006600;
+	opacity: 0.5;
+	font-size: 30px;
+}
+
+h4 {
+	font-size: 20px;
+	text-shadow: 1px 1px 1px #FFFFFF;
+	color: #006600;
+}
+li{
+	list-style-type: none;
+}
+.jumbotron {
+	color: #006600;
+}
+#dates {
+	font-size: 17px;
+	color: #006600;
+	text-shadow: 1px 1px 1px #000000;
+}
+
+.panel-collapse li{
+	color: black;
+}
+
+#skills {
+	list-style-type: none;
+	border: 1px ridge #AAAAAA;
+	opacity: 0.6;
+	background-color: #006600;
+}
+#skillset{
+	margin-top: 0px;
+}

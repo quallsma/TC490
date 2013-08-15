@@ -68,14 +68,14 @@
 					$SQL = "SELECT * FROM blog1";
 					$comments = mysql_query($SQL) or die("What happen?");
 					echo "<table class=\"table\">";
-					echo "<tr><th>Commentator</th><th>Comment</th></tr>";
+					echo "<tr><th>Commentator</th><th>Comment</th><th>Date & Time</th></tr>";
 					while($row = mysql_fetch_array($comments)){
 						$gravImage = $row['gravatar'];
 						$name = $row['name'];
 						$time = $row['time'];
 						$email = $row['email'];
 						$comment = $row['comment'];
-						echo "<tr><td><img src=\"$gravImage\" />$name</td><td>$comment</td></tr>";
+						echo "<tr><td><img src=\"$gravImage\" />$name</td><td>$comment</td><td>$time</td></tr>";
 					}
 					echo "</table>";
 					mysql_close($connect);
@@ -90,7 +90,19 @@
 						$default = "gravatarImage";
 						$size = 40;
 						$grav_url = $gravUrl.'?gravatar_id='.md5( strtolower($email) ).'&default='.urlencode($default).'&size='.$size;
-
+						$errors = 0;
+						
+						if (!$name) {
+							$errors++;
+						}
+						if (!$email) {
+							$errors++;
+						}
+						if (!$comment) {
+							$errors++;
+						}
+						
+						if($errors == 0){
 						require("../php/connect.php");
 						$SQL = "INSERT INTO blog1 (gravatar, name, time, email, comment) values ('$grav_url','$name','$dateTime','$email','$comment')";
 						if(mysql_query($SQL)){
@@ -99,6 +111,10 @@
 							echo '<div class="alert alert-danger"><strong>Sorry, could not add your comment at this moment.</strong></div>';
 						}
 						mysql_close($connect);
+						}
+						else{
+							echo '<div class="alert alert-danger"><strong>Sorry, could you complete your survey.</strong></div>';
+						}
 					}
 					?>
 					<form name="blogComment" method="post" onsubmit="return validateComment()" action="../php/blogMarsalis.php">
